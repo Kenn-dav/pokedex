@@ -110,31 +110,24 @@ Error generating stack: `+e.message+`
                                     rounded-lg
                                     hover:bg-green-700
                                     transition
-                                `,children:`Ver Detalles`})})})}),t&&(0,d.jsx)(v,{pokemon:r,onClose:()=>n(!1)})]})},b=class{constructor(){this.pokelist=[],this.fetchedIds=[],this.flatlist={}}FetchList(e=1,t=20,n){let r=t*(e-1);fetch(`https://pokeapi.co/api/v2/pokemon?offset=${r}&limit=${t}`).then(e=>e.json()).then(e=>{n===void 0?alert(`Se Cargo los datos de Pokemon API`):n(e)}).catch(e=>{alert(`Error al cargar la lista de pokemon`)})}},x=()=>{let[e,t]=(0,l.useState)([]),[n,r]=(0,l.useState)(1),[i,a]=(0,l.useState)(20),[o,s]=(0,l.useState)(``),c=(0,l.useMemo)(()=>new b,[]);(0,l.useEffect)(()=>{c&&c.FetchList(n,i,t)},[n,i,c]);let u=e?.results?.filter(e=>e.name.toLowerCase().includes(o.toLowerCase()));return e?.results?(0,d.jsxs)(`main`,{className:`w-full`,children:[(0,d.jsxs)(`section`,{className:`
-                w-full
+                                `,children:`Ver Detalles`})})})}),t&&(0,d.jsx)(v,{pokemon:r,onClose:()=>n(!1)})]})},b=class{constructor(){this.pokelist=[],this.fetchedIds=[],this.flatlist={}}FetchList(e=1,t=20,n){let r=t*(e-1);fetch(`https://pokeapi.co/api/v2/pokemon?offset=${r}&limit=${t}`).then(e=>e.json()).then(e=>{n===void 0?alert(`Se Cargo los datos de Pokemon API`):n(e)}).catch(e=>{alert(`Error al cargar la lista de pokemon`)})}},x=()=>{let[e,t]=(0,l.useState)(null),[n,r]=(0,l.useState)(1),[i]=(0,l.useState)(20),[a,o]=(0,l.useState)(``),s=new b;if((0,l.useEffect)(()=>{s.FetchList(n,i,t)},[n,i]),!e)return(0,d.jsx)(`div`,{className:`text-center mt-10`,children:`Cargando Pokémon...`});let c=e.results.filter(e=>e.name.toLowerCase().includes(a.toLowerCase()));return(0,d.jsxs)(`main`,{children:[(0,d.jsxs)(`section`,{className:`
                 flex
-                flex-col
-                md:flex-row
                 justify-between
                 items-center
-                gap-4
                 p-6
+                flex-wrap
+                gap-4
             `,children:[(0,d.jsx)(`h2`,{className:`
                     text-2xl
                     font-bold
                     text-red-600
-                `,children:`Catálogo de Pokémon`}),(0,d.jsx)(`input`,{type:`text`,placeholder:`Buscar Pokémon...`,value:o,onChange:e=>s(e.target.value),className:`
+                `,children:`Catálogo de Pokémon`}),(0,d.jsx)(`input`,{type:`text`,placeholder:`Buscar Pokémon...`,value:a,onChange:e=>o(e.target.value),className:`
                         border
-                        border-gray-300
                         rounded-lg
                         px-4
                         py-2
-                        w-full
-                        md:w-80
-                        focus:outline-none
-                        focus:ring-2
-                        focus:ring-red-500
-                    `})]}),(0,d.jsx)(p,{gridItems:u?.map(e=>(0,d.jsx)(y,{data:e},e.name))}),(0,d.jsxs)(`section`,{className:`
+                        w-64
+                    `})]}),(0,d.jsx)(p,{gridItems:c.map(e=>(0,d.jsx)(y,{data:e},e.name))}),(0,d.jsxs)(`section`,{className:`
                 flex
                 justify-center
                 gap-4
@@ -144,16 +137,10 @@ Error generating stack: `+e.message+`
                         py-2
                         bg-gray-300
                         rounded-lg
-                        hover:bg-gray-400
-                        disabled:opacity-50
-                    `,children:`Anterior`}),(0,d.jsxs)(`span`,{className:`
-                    font-bold
-                    text-lg
-                `,children:[`Página `,n]}),(0,d.jsx)(`button`,{onClick:()=>r(n+1),className:`
+                    `,children:`Anterior`}),(0,d.jsxs)(`span`,{className:`font-bold`,children:[`Página `,n]}),(0,d.jsx)(`button`,{onClick:()=>r(n+1),className:`
                         px-4
                         py-2
                         bg-red-500
                         text-white
                         rounded-lg
-                        hover:bg-red-600
-                    `,children:`Siguiente`})]})]}):(0,d.jsx)(`div`,{className:`flex justify-center items-center h-screen`,children:(0,d.jsx)(`div`,{className:`text-2xl font-bold animate-pulse text-red-600`,children:`Cargando Pokémon...`})})};function ee(){return(0,d.jsxs)(`div`,{className:`flex flex-col min-h-screen`,children:[(0,d.jsx)(f,{}),(0,d.jsx)(`main`,{className:`flex-1`,children:(0,d.jsx)(x,{})}),(0,d.jsx)(`footer`,{className:`bg-red-500 text-white font-bold p-4 text-center`,children:`© 2024 Kenn_dav. Todos los derechos reservados.`})]})}(0,c.createRoot)(document.getElementById(`root`)).render((0,d.jsx)(l.StrictMode,{children:(0,d.jsx)(ee,{})}));
+                    `,children:`Siguiente`})]})]})};function ee(){return(0,d.jsxs)(`div`,{className:`flex flex-col min-h-screen`,children:[(0,d.jsx)(f,{}),(0,d.jsx)(`main`,{className:`flex-1`,children:(0,d.jsx)(x,{})}),(0,d.jsx)(`footer`,{className:`bg-red-500 text-white font-bold p-4 text-center`,children:`© 2024 Kenn_dav. Todos los derechos reservados.`})]})}(0,c.createRoot)(document.getElementById(`root`)).render((0,d.jsx)(l.StrictMode,{children:(0,d.jsx)(ee,{})}));
